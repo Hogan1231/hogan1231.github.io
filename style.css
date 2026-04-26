@@ -6,27 +6,27 @@
 }
 
 :root {
-    /* 主色调 */
+    /* 主色调 - 适配学术风格，偏沉稳的深蓝灰 */
     --primary-color: #2c3e50;
     --primary-light: #34495e;
     --primary-dark: #1a2530;
-    /* 辅助色 */
+    /* 辅助色 - 淡蓝，提升学术页面的专业感 */
     --accent-color: #3498db;
     --accent-light: #4aa3df;
-    /* 背景色 */
+    /* 背景色 - 浅灰底，减少视觉疲劳 */
     --bg-light: #f9f9f9;
     --bg-white: #ffffff;
     --bg-gray: #f4f4f4;
-    /* 文本色 */
+    /* 文本色 - 层次分明，提升可读性 */
     --text-dark: #333333;
     --text-gray: #555555;
     --text-light: #666666;
-    /* 边框/阴影 */
+    /* 边框/阴影 - 精细阴影，符合学术页面简约风格 */
     --border-radius: 8px;
     --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.12);
     --shadow-lg: 0 8px 20px rgba(0, 0, 0, 0.15);
-    /* 过渡动画 */
+    /* 过渡动画 - 柔和过渡，不突兀 */
     --transition-default: all 0.3s ease-in-out;
 }
 
@@ -45,7 +45,7 @@ body {
     padding: 0 20px;
 }
 
-/* 导航栏美化 */
+/* 导航栏 - 适配页面的4个导航项+繁体中文切换 */
 nav {
     background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     color: white;
@@ -123,11 +123,10 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* 语言切换美化 */
+/* 语言切换 - 适配仅繁体中文一个按钮的样式 */
 .language-switch {
     display: flex;
     align-items: center;
-    gap: 1rem;
 }
 
 .language-switch::before {
@@ -155,7 +154,7 @@ nav a:hover::after {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* 英雄区（个人信息）美化 */
+/* 英雄区（个人信息）- 适配头像+MA学生信息布局 */
 .hero {
     background: linear-gradient(135deg, var(--bg-white), #f8f9fa);
     padding: 4rem 0;
@@ -163,6 +162,7 @@ nav a:hover::after {
     box-shadow: var(--shadow-sm);
     position: relative;
     overflow: hidden;
+    margin-bottom: 2rem; /* 增加与下方about区块的间距 */
 }
 
 .hero::before {
@@ -249,7 +249,7 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* 通用区块美化 */
+/* 通用区块 - 适配about/research/highlights/news四个区块 */
 section {
     background-color: var(--bg-white);
     padding: 3rem 0;
@@ -293,7 +293,13 @@ section p {
     color: var(--text-dark);
 }
 
-/* 研究方向列表美化 */
+/* About区块 - 适配长文本的可读性优化 */
+.about p strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* 研究方向列表 - 适配3个研究方向的样式 */
 .research ul {
     list-style: none;
     margin-left: 1rem;
@@ -304,6 +310,7 @@ section p {
     padding-left: 1.5rem;
     position: relative;
     font-size: 1.05rem;
+    line-height: 1.7;
 }
 
 .research li::before {
@@ -315,8 +322,8 @@ section p {
     font-size: 1.2rem;
 }
 
-/* 高亮区块美化 */
-.highlight-item {
+/* 高亮区块 - 适配2个highlight-item的布局 */
+.highlights .highlight-item {
     background: linear-gradient(135deg, var(--bg-gray), #f0f0f5);
     padding: 2rem;
     margin-bottom: 2rem;
@@ -326,20 +333,28 @@ section p {
     transition: var(--transition-default);
 }
 
-.highlight-item:hover {
+.highlights .highlight-item:last-child {
+    margin-bottom: 0; /* 最后一个item取消底部间距 */
+}
+
+.highlights .highlight-item:hover {
     border-left-color: var(--accent-color);
     transform: translateX(5px);
     box-shadow: var(--shadow-md);
 }
 
-.highlight-item h3 {
+.highlights .highlight-item h3 {
     color: var(--primary-color);
     margin-bottom: 0.8rem;
     font-size: 1.3rem;
     font-weight: 600;
 }
 
-/* 新闻列表美化 */
+.highlights .highlight-item p {
+    margin-bottom: 0; /* 取消p标签底部间距 */
+}
+
+/* 新闻列表 - 适配3条新闻的样式 */
 .news-list {
     list-style: none;
 }
@@ -350,6 +365,7 @@ section p {
     transition: var(--transition-default);
     padding-left: 1rem;
     position: relative;
+    font-size: 1.05rem;
 }
 
 .news-list li::before {
@@ -364,7 +380,7 @@ section p {
 }
 
 .news-list li:last-child {
-    border-bottom: none;
+    border-bottom: none; /* 最后一条新闻取消底边框 */
 }
 
 .news-list li:hover {
@@ -373,7 +389,11 @@ section p {
     border-radius: 4px;
 }
 
-/* 页脚美化 */
+.news-list li strong {
+    color: var(--primary-dark);
+}
+
+/* 页脚 - 适配版权信息样式 */
 footer {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
     color: white;
@@ -388,9 +408,10 @@ footer p {
     font-size: 1rem;
     letter-spacing: 0.5px;
     opacity: 0.9;
+    margin-bottom: 0; /* 取消p标签默认间距 */
 }
 
-/* 响应式优化 */
+/* 响应式适配 - 针对不同屏幕优化布局 */
 @media (max-width: 968px) {
     .nav-container {
         grid-template-columns: 1fr;
@@ -440,7 +461,7 @@ footer p {
         font-size: 1.7rem;
     }
 
-    .highlight-item {
+    .highlights .highlight-item {
         padding: 1.5rem;
     }
 }
@@ -461,5 +482,13 @@ footer p {
 
     nav a {
         font-size: 0.9rem;
+    }
+
+    .highlights .highlight-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .news-list li {
+        font-size: 1rem;
     }
 }
