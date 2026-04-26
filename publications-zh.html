@@ -6,36 +6,78 @@
     <title>學術論文 - 黃俊豪</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .pub-section {
-            margin-bottom: 3rem;
+        /* 统一区块样式，对齐全局style.css体系 */
+        .section-wrapper {
+            padding: 40px 0;
+            margin: 0 auto;
+            max-width: 1200px;
         }
-        
-        .pub-item {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .pub-item:last-child {
-            border-bottom: none;
-        }
-        
-        .pub-title {
-            font-weight: bold;
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
             color: #2c3e50;
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        
+        .section-title::before {
+            content: "📝";
+            font-size: 1.5rem;
+        }
+
+        /* 论文列表样式优化 */
+        .pub-list {
+            display: grid;
+            gap: 24px;
+        }
+        .pub-item {
+            padding: 24px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .pub-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .pub-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
         .pub-venue {
             font-style: italic;
-            color: #555;
-            margin-bottom: 0.5rem;
+            color: #34495e;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            padding-left: 4px;
+            border-left: 3px solid #3498db;
         }
-        
         .pub-description {
-            color: #666;
+            color: #586e75;
             font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .section-wrapper {
+                padding: 20px 16px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .pub-item {
+                padding: 16px;
+            }
+            .pub-title {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -45,7 +87,7 @@
             <h1>黃俊豪</h1>
             <ul>
                 <li><a href="index-zh.html">首頁</a></li>
-                <li><a href="publications-zh.html">學術論文</a></li>
+                <li><a href="publications-zh.html" class="active">學術論文</a></li>
                 <li><a href="conferences-zh.html">會議發表</a></li>
                 <li><a href="cv.pdf" target="_blank">履歷</a></li>
             </ul>
@@ -56,20 +98,24 @@
     </nav>
 
     <main>
-        <section class="pub-section">
+        <!-- 统一区块包裹，对齐全局样式 -->
+        <section class="section-wrapper pub-section">
             <div class="container">
-                <h2>📝 學術論文</h2>
+                <h2 class="section-title">學術論文</h2>
                 
-                <div class="pub-item">
-                    <div class="pub-title">数字人文视阈下清末民初侦探小说翻译活动网络研究——基于Gephi的可视化分析</div>
-                    <div class="pub-venue">《外文研究》，已接受，即將出版（獨立作者）</div>
-                    <p class="pub-description">運用社會網絡分析方法繪製晚清時期偵探小說譯者關係與報刊網絡，將社會網絡分析方法論引入翻譯史中呈現翻譯活動網絡。</p>
-                </div>
+                <!-- 论文列表容器，优化布局 -->
+                <div class="pub-list">
+                    <div class="pub-item">
+                        <div class="pub-title">数字人文视阈下清末民初侦探小说翻译活动网络研究——基于Gephi的可视化分析</div>
+                        <div class="pub-venue">《外文研究》，已接受，即將出版（獨立作者）</div>
+                        <p class="pub-description">運用社會網絡分析方法繪製晚清時期偵探小說譯者關係與報刊網絡，將社會網絡分析方法論引入翻譯史中呈現翻譯活動網絡。</p>
+                    </div>
 
-                <div class="pub-item">
-                    <div class="pub-title">批判种族视阈下的翻译研究——评《翻译与种族》</div>
-                    <div class="pub-venue">《亞太跨學科翻譯研究》第17卷第1期，2027年，即將出版（第一作者）</div>
-                    <p class="pub-description">評介 Corine Tachtiris 的 Translation and Race，連結批判種族理論與後殖民翻譯研究，提出將種族話語納入中國翻譯學術研究的議程。</p>
+                    <div class="pub-item">
+                        <div class="pub-title">批判种族视阈下的翻译研究——评《翻译与种族》</div>
+                        <div class="pub-venue">《亞太跨學科翻譯研究》第17卷第1期，2027年，即將出版（第一作者）</div>
+                        <p class="pub-description">評介 Corine Tachtiris 的 Translation and Race，連結批判種族理論與後殖民翻譯研究，提出將種族話語納入中國翻譯學術研究的議程。</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -77,7 +123,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 黃俊豪。最後更新：2026年4月</p>
+            <p class="copyright">&copy; 2026 黃俊豪。最後更新：2026年4月</p>
         </div>
     </footer>
 </body>
