@@ -35,6 +35,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 nav h1 {
@@ -46,6 +48,8 @@ nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
+    margin: 0;
+    flex-shrink: 0;
 }
 
 nav a {
@@ -62,6 +66,7 @@ nav a:hover {
 /* Language Switch */
 .language-switch {
     margin-left: auto;
+    flex-shrink: 0;
 }
 
 .lang-btn {
@@ -70,6 +75,7 @@ nav a:hover {
     border-radius: 4px;
     font-size: 0.9rem;
     transition: background-color 0.3s;
+    white-space: nowrap;
 }
 
 .lang-btn:hover {
@@ -198,8 +204,24 @@ footer {
         text-align: center;
     }
     
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .nav-container h1 {
+        width: 100%;
+    }
+    
     nav ul {
         gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .language-switch {
+        margin-left: 0;
+        width: 100%;
     }
     
     .profile-photo {
