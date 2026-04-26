@@ -5,61 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conferences - Junhao Huang</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .conf-section {
-            margin-bottom: 3rem;
-        }
-        
-        .conf-item {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .conf-item:last-child {
-            border-bottom: none;
-        }
-        
-        .conf-title {
-            font-weight: bold;
-            color: #2c3e50;
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-        
-        .conf-venue {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 0.5rem;
-        }
-        
-        .conf-location {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .conf-award {
-            background-color: #fff3cd;
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            display: inline-block;
-            margin-top: 0.5rem;
-            margin-right: 0.5rem;
-            font-size: 0.9rem;
-            color: #856404;
-        }
-        
-        .conf-status {
-            background-color: #d1ecf1;
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            display: inline-block;
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            color: #0c5460;
-        }
-    </style>
+    <!-- 移除内联样式，完全复用全局style.css -->
 </head>
 <body>
     <nav>
@@ -78,38 +24,39 @@
     </nav>
 
     <main>
-        <section class="conf-section">
+        <!-- 复用全局section样式，移除自定义conf-section类 -->
+        <section>
             <div class="container">
                 <h2>🎤 Conference Presentations</h2>
 
-                <div class="conf-item">
-                    <div class="conf-title">Between Translation, Commerce, and Politics: Unveiling the Identity and Motives of Chen Enrong within Kang Youwei's Overseas Qinwang Movement</div>
-                    <div class="conf-venue">10th World Conference of Chinese Studies (WACS)</div>
-                    <div class="conf-location">📍 The University of Hong Kong | 12 August 2026</div>
-                    <p>Archival research examining Chen Enrong's role as translator in Kang Youwei's late Qing political history, revealing conflicting objectives between Hong Kong commercial circles and exiled reformers.</p>
-                    <div class="conf-award">🏆 Young Scholar Award (ranked 2nd in Modern History)</div>
-                    <div class="conf-status">Accepted - Forthcoming</div>
+                <!-- 基于全局样式重构会议项，复用highlight-item等通用类 -->
+                <div class="highlight-item" style="border-left-color: #2c3e50; margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.3rem;">Between Translation, Commerce, and Politics: Unveiling the Identity and Motives of Chen Enrong within Kang Youwei's Overseas Qinwang Movement</h3>
+                    <p style="font-style: italic; color: #555; margin-bottom: 0.5rem; text-align: left;">10th World Conference of Chinese Studies (WACS)</p>
+                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 0.5rem; text-align: left;">📍 The University of Hong Kong | 12 August 2026</p>
+                    <p style="margin-bottom: 0.5rem; text-align: justify;">Archival research examining Chen Enrong's role as translator in Kang Youwei's late Qing political history, revealing conflicting objectives between Hong Kong commercial circles and exiled reformers.</p>
+                    <span style="background-color: #fff3cd; padding: 0.3rem 0.8rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; margin-right: 0.5rem; font-size: 0.9rem; color: #856404;">🏆 Young Scholar Award (ranked 2nd in Modern History)</span>
+                    <span style="background-color: #d1ecf1; padding: 0.3rem 0.8rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; font-size: 0.9rem; color: #0c5460;">Accepted - Forthcoming</span>
                 </div>
 
-                <div class="conf-item">
-                    <div class="conf-title">From Empire to the Globe: The Translational Evolution of Han Gongqiu and the Changing Images of xiqu in the West</div>
-                    <div class="conf-venue">International Nineteenth Century Studies Association (INCSA) Conference - Revolution, Revelation, Reconciliation</div>
-                    <div class="conf-location">📍 National Union Building, Washington, DC (Online) | 21 July 2026</div>
-                    <p>Historiographical analysis tracing a century of the translations of <em>Han Gongqiu</em>, examining shifts from assimilative to heterogenized translation practices and the evolving image of Chinese opera in Western contexts.</p>
-                    <div class="conf-status">Accepted - Forthcoming (Online)</div>
+                <div class="highlight-item" style="border-left-color: #2c3e50; margin-bottom: 2rem;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.3rem;">From Empire to the Globe: The Translational Evolution of Han Gongqiu and the Changing Images of xiqu in the West</h3>
+                    <p style="font-style: italic; color: #555; margin-bottom: 0.5rem; text-align: left;">International Nineteenth Century Studies Association (INCSA) Conference - Revolution, Revelation, Reconciliation</p>
+                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 0.5rem; text-align: left;">📍 National Union Building, Washington, DC (Online) | 21 July 2026</p>
+                    <p style="margin-bottom: 0.5rem; text-align: justify;">Historiographical analysis tracing a century of the translations of <em>Han Gongqiu</em>, examining shifts from assimilative to heterogenized translation practices and the evolving image of Chinese opera in Western contexts.</p>
+                    <span style="background-color: #d1ecf1; padding: 0.3rem 0.8rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; font-size: 0.9rem; color: #0c5460;">Accepted - Forthcoming (Online)</span>
                 </div>
 
-                <div class="conf-item">
-                    <div class="conf-title">History, Statistics, Network: Mapping the Translation of Detective Fiction in Late Qing and Early Republican China</div>
-                    <div class="conf-venue">III International Conference on PhD Research about Translation</div>
-                    <div class="conf-location">📍 Complutense University of Madrid, Spain | 12 March 2026</div>
-                    <p>Applied social network analysis using Gephi to map the network of detective fiction translation activities in late Qing and early Republican China. Combined quantitative visualization with historical interpretation.</p>
-                    <div class="conf-status">✅ Presented</div>
-                    <div class="conf-award"> Publication Forthcoming</div>
+                <div class="highlight-item" style="border-left-color: #2c3e50;">
+                    <h3 style="font-size: 1.1rem; margin-bottom: 0.3rem;">History, Statistics, Network: Mapping the Translation of Detective Fiction in Late Qing and Early Republican China</h3>
+                    <p style="font-style: italic; color: #555; margin-bottom: 0.5rem; text-align: left;">III International Conference on PhD Research about Translation</p>
+                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 0.5rem; text-align: left;">📍 Complutense University of Madrid, Spain | 12 March 2026</p>
+                    <p style="margin-bottom: 0.5rem; text-align: justify;">Applied social network analysis using Gephi to map the network of detective fiction translation activities in late Qing and early Republican China. Combined quantitative visualization with historical interpretation.</p>
+                    <span style="background-color: #d1ecf1; padding: 0.3rem 0.8rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; margin-right: 0.5rem; font-size: 0.9rem; color: #0c5460;">✅ Presented</span>
+                    <span style="background-color: #fff3cd; padding: 0.3rem 0.8rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; font-size: 0.9rem; color: #856404;">Publication Forthcoming</span>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>
