@@ -31,7 +31,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Times New Roman', Times, serif;
+    font-family: "SimSun", 宋体, 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Times New Roman', Times, serif;
     line-height: 1.7;
     color: var(--text-dark);
     background-color: var(--bg-light);
