@@ -6,14 +6,17 @@
     <title>會議發表 - 黃俊豪</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* 会议板块样式优化，统一继承style.css设计语言 */
         .conf-section {
-            margin-bottom: 3rem;
+            background-color: white;
+            padding: 2.5rem 0;
+            margin-bottom: 1.5rem;
         }
         
         .conf-item {
             margin-bottom: 2rem;
             padding-bottom: 1.5rem;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #eee; /* 统一浅灰色分隔线 */
         }
         
         .conf-item:last-child {
@@ -21,22 +24,27 @@
         }
         
         .conf-title {
-            font-weight: bold;
-            color: #2c3e50;
+            font-weight: 600;
+            color: #2c3e50; /* 统一主色调 */
             font-size: 1.1rem;
             margin-bottom: 0.3rem;
+            line-height: 1.6; /* 统一行高 */
         }
         
         .conf-venue {
             font-style: italic;
             color: #555;
             margin-bottom: 0.5rem;
+            font-size: 1rem;
         }
         
         .conf-location {
             color: #666;
             font-size: 0.95rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem; /* 调整间距更舒适 */
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .conf-award {
@@ -48,6 +56,7 @@
             margin-right: 0.5rem;
             font-size: 0.9rem;
             color: #856404;
+            border-left: 3px solid #856404; /* 增加左侧强调线，统一设计风格 */
         }
         
         .conf-status {
@@ -58,6 +67,25 @@
             margin-top: 0.5rem;
             font-size: 0.9rem;
             color: #0c5460;
+            border-left: 3px solid #0c5460; /* 增加左侧强调线，统一设计风格 */
+        }
+
+        /* 响应式适配 - 继承style.css的断点 */
+        @media (max-width: 768px) {
+            .conf-title {
+                font-size: 1rem;
+            }
+            
+            .conf-venue, .conf-location {
+                font-size: 0.95rem;
+            }
+            
+            .conf-award, .conf-status {
+                font-size: 0.85rem;
+                padding: 0.2rem 0.6rem;
+                display: inline-block;
+                margin-bottom: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -100,7 +128,7 @@
                 </div>
 
                 <div class="conf-item">
-                    <div class="conf-title">数字人文视阈下清末民初侦探小说翻译活动网络研究——基于Gephi的可视化分析</div>
+                    <div class="conf-title">中华戏曲海外传播图景的流变考察——以《汉宫秋》在西方的译介路径为例</div>
                     <div class="conf-venue">第三屆博士翻譯研究國際會議</div>
                     <div class="conf-location">📍 西班牙馬德里康普頓斯大學 | 📅 2026年3月</div>
                     <p>運用 Gephi 社會網絡分析重構晚清偵探小說翻譯中的譯者關係與報刊網絡，結合量化視覺化與歷史詮釋。</p>
