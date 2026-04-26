@@ -6,36 +6,79 @@
     <title>Publications - Junhao Huang</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .pub-section {
-            margin-bottom: 3rem;
+        /* 全局区块统一样式，对齐中文版本体系 */
+        .section-wrapper {
+            padding: 40px 0;
+            margin: 0 auto;
+            max-width: 1200px;
         }
-        
-        .pub-item {
-            margin-bottom: 2rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .pub-item:last-child {
-            border-bottom: none;
-        }
-        
-        .pub-title {
-            font-weight: bold;
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
             color: #2c3e50;
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
         }
-        
+        .section-title::before {
+            content: "📝";
+            font-size: 1.5rem;
+        }
+
+        /* 论文列表优化 - 适配英文排版 */
+        .pub-list {
+            display: grid;
+            gap: 24px;
+        }
+        .pub-item {
+            padding: 24px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .pub-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .pub-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.4; /* 英文行高适配 */
+        }
         .pub-venue {
             font-style: italic;
-            color: #555;
-            margin-bottom: 0.5rem;
+            color: #34495e;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            padding-left: 4px;
+            border-left: 3px solid #3498db;
         }
-        
         .pub-description {
-            color: #666;
+            color: #586e75;
             font-size: 0.95rem;
+            line-height: 1.6; /* 英文阅读最优行高 */
+        }
+
+        /* 响应式适配 - 移动端优化 */
+        @media (max-width: 768px) {
+            .section-wrapper {
+                padding: 20px 16px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .pub-item {
+                padding: 16px;
+            }
+            .pub-title {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -45,7 +88,7 @@
             <h1>Junhao Huang</h1>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="publications.html">Publications</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
                 <li><a href="conferences.html">Conferences</a></li>
                 <li><a href="cv.pdf" target="_blank">CV</a></li>
             </ul>
@@ -56,20 +99,24 @@
     </nav>
 
     <main>
-        <section class="pub-section">
+        <!-- 统一区块包裹，对齐全局样式 -->
+        <section class="section-wrapper pub-section">
             <div class="container">
-                <h2>📝 Publications</h2>
+                <h2 class="section-title">Publications</h2>
                 
-                <div class="pub-item">
-                    <div class="pub-title">History, Statistics, Network: Mapping the Translation of Detective Fiction in Late Qing and Early Republican China</div>
-                    <div class="pub-venue">Foreign Studies《外文研究》, accepted for publication, forthcoming. (Single author)</div>
-                    <p class="pub-description">Applied social network analysis using Gephi to map the network of detective fiction translation activities in late Qing and early Republican China. Combined quantitative visualization with historical interpretation.</p>
-                </div>
+                <!-- 论文列表容器 - 优化布局结构 -->
+                <div class="pub-list">
+                    <div class="pub-item">
+                        <div class="pub-title">History, Statistics, Network: Mapping the Translation of Detective Fiction in Late Qing and Early Republican China</div>
+                        <div class="pub-venue">Foreign Studies《外文研究》, accepted for publication, forthcoming. (Single author)</div>
+                        <p class="pub-description">Applied social network analysis using Gephi to map the network of detective fiction translation activities in late Qing and early Republican China. Combined quantitative visualization with historical interpretation.</p>
+                    </div>
 
-                <div class="pub-item">
-                    <div class="pub-title">Translation Studies from a Critical Race Perspective: A Review of Translation and Race</div>
-                    <div class="pub-venue">Asia Pacific Interdisciplinary Translation Studies《亞太跨學科翻譯研究》, Vol.17, No.1, 2027, forthcoming. (First author)</div>
-                    <p class="pub-description">Book review of Corine Tachtiris's <em>Translation and Race</em>, bridging Critical Race Theory with translation studies and proposing a research agenda for integrating racial discourse into Chinese translation scholarship.</p>
+                    <div class="pub-item">
+                        <div class="pub-title">Translation Studies from a Critical Race Perspective: A Review of Translation and Race</div>
+                        <div class="pub-venue">Asia Pacific Interdisciplinary Translation Studies《亞太跨學科翻譯研究》, Vol.17, No.1, 2027, forthcoming. (First author)</div>
+                        <p class="pub-description">Book review of Corine Tachtiris's <em>Translation and Race</em>, bridging Critical Race Theory with translation studies and proposing a research agenda for integrating racial discourse into Chinese translation scholarship.</p>
+                    </div>
                 </div>
             </div>
         </section>
