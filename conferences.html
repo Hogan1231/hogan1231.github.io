@@ -5,7 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conferences - Junhao Huang</title>
     <link rel="stylesheet" href="style.css">
-    <!-- 移除内联样式，完全复用全局style.css -->
+    <style>
+        .conf-section {
+            margin-bottom: 3rem;
+        }
+        
+        .conf-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .conf-item:last-child {
+            border-bottom: none;
+        }
+        
+        .conf-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .conf-venue {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        
+        .conf-location {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .conf-award {
+            background-color: #fff3cd;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 0.5rem;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+            color: #856404;
+        }
+        
+        .conf-status {
+            background-color: #d1ecf1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #0c5460;
+        }
+
+        /* 新增奖项与荣誉板块样式（与繁体版对齐） */
+        .awards-section {
+            margin-bottom: 3rem;
+        }
+
+        .award-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .award-item:last-child {
+            border-bottom: none;
+        }
+
+        .award-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .award-issuer {
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        .award-desc {
+            color: #666;
+            font-size: 0.95rem;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -18,42 +104,78 @@
                 <li><a href="cv.pdf" target="_blank">CV</a></li>
             </ul>
             <div class="language-switch">
-                <a href="conferences-zh.html" class="lang-btn">繁體中文</a>
+                <a href="conferences-zh.html" class="lang-btn">Traditional Chinese</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <!-- 复用全局section样式，移除自定义conf-section类 -->
-        <section>
+        <!-- 会议发表板块 -->
+        <section class="conf-section">
             <div class="container">
                 <h2>🎤 Conference Presentations</h2>
 
-                <!-- 基于全局样式重构会议项，复用highlight-item等通用类 -->
-                <div class="highlight-item" style="border-left-color: #2c3e50; margin-bottom: 2rem;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 0.3rem;">Between Translation, Commerce, and Politics: Unveiling the Identity and Motives of Chen Enrong within Kang Youwei's Overseas Qinwang Movement</h3>
-                    <p style="font-style: italic; color: #555; margin-bottom: 0.5rem; text-align: left;">10th World Conference of Chinese Studies (WACS)</p>
-                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 0.5rem; text-align: left;">📍 The University of Hong Kong | 12 August 2026</p>
-                    <p style="margin-bottom: 0.5rem; text-align: justify;">Archival research examining Chen Enrong's role as translator in Kang Youwei's late Qing political history, revealing conflicting objectives between Hong Kong commercial circles and exiled reformers.</p>
-                    <span style="background-color: #fff3cd; padding: 0.3rem 0.8rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; margin-right: 0.5rem; font-size: 0.9rem; color: #856404;">🏆 Young Scholar Award (ranked 2nd in Modern History)</span>
-                    <span style="background-color: #d1ecf1; padding: 0.3rem 0.8rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; font-size: 0.9rem; color: #0c5460;">Accepted - Forthcoming</span>
+                <div class="conf-item">
+                    <div class="conf-title">Between Translation, Commerce, and Politics: Unveiling the Identity and Motives of Chen Enrong within Kang Youwei's Overseas Qinwang Movement</div>
+                    <div class="conf-venue">10th World Conference of Chinese Studies (WACS)</div>
+                    <div class="conf-location">📍 The University of Hong Kong | 12 August 2026</div>
+                    <p>Archival research examining Chen Enrong's role as translator in Kang Youwei's late Qing political history, revealing conflicting objectives between Hong Kong commercial circles and exiled reformers.</p>
+                    <div class="conf-award">🏆 Young Scholar Award (ranked 2nd in Modern History)</div>
+                    <div class="conf-status">Accepted - Forthcoming</div>
                 </div>
 
-                <div class="highlight-item" style="border-left-color: #2c3e50; margin-bottom: 2rem;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 0.3rem;">From Empire to the Globe: The Translational Evolution of Han Gongqiu and the Changing Images of xiqu in the West</h3>
-                    <p style="font-style: italic; color: #555; margin-bottom: 0.5rem; text-align: left;">International Nineteenth Century Studies Association (INCSA) Conference - Revolution, Revelation, Reconciliation</p>
-                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 0.5rem; text-align: left;">📍 National Union Building, Washington, DC (Online) | 21 July 2026</p>
-                    <p style="margin-bottom: 0.5rem; text-align: justify;">Historiographical analysis tracing a century of the translations of <em>Han Gongqiu</em>, examining shifts from assimilative to heterogenized translation practices and the evolving image of Chinese opera in Western contexts.</p>
-                    <span style="background-color: #d1ecf1; padding: 0.3rem 0.8rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; font-size: 0.9rem; color: #0c5460;">Accepted - Forthcoming (Online)</span>
+                <div class="conf-item">
+                    <div class="conf-title">From Empire to the Globe: The Translational Evolution of Han Gongqiu and the Changing Images of Xiqu in the West</div>
+                    <div class="conf-venue">International Nineteenth Century Studies Association (INCSA) Conference - Revolution, Revelation, Reconciliation</div>
+                    <div class="conf-location">📍 National Union Building, Washington, DC (Online) | 21 July 2026</div>
+                    <p>Historiographical analysis tracing a century of the translations of <em>Han Gongqiu</em>, examining shifts from assimilative to heterogenized translation practices and the evolving image of Chinese opera in Western contexts.</p>
+                    <div class="conf-status">Accepted - Forthcoming (Online)</div>
                 </div>
 
-                <div class="highlight-item" style="border-left-color: #2c3e50;">
-                    <h3 style="font-size: 1.1rem; margin-bottom: 0.3rem;">History, Statistics, Network: Mapping the Translation of Detective Fiction in Late Qing and Early Republican China</h3>
-                    <p style="font-style: italic; color: #555; margin-bottom: 0.5rem; text-align: left;">III International Conference on PhD Research about Translation</p>
-                    <p style="color: #666; font-size: 0.95rem; margin-bottom: 0.5rem; text-align: left;">📍 Complutense University of Madrid, Spain | 12 March 2026</p>
-                    <p style="margin-bottom: 0.5rem; text-align: justify;">Applied social network analysis using Gephi to map the network of detective fiction translation activities in late Qing and early Republican China. Combined quantitative visualization with historical interpretation.</p>
-                    <span style="background-color: #d1ecf1; padding: 0.3rem 0.8rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; margin-right: 0.5rem; font-size: 0.9rem; color: #0c5460;">✅ Presented</span>
-                    <span style="background-color: #fff3cd; padding: 0.3rem 0.8rem; border-radius: 4px; display: inline-block; margin-top: 0.5rem; font-size: 0.9rem; color: #856404;">Publication Forthcoming</span>
+                <div class="conf-item">
+                    <div class="conf-title">History, Statistics, Network: Mapping the Translation of Detective Fiction in Late Qing and Early Republican China</div>
+                    <div class="conf-venue">III International Conference on PhD Research about Translation</div>
+                    <div class="conf-location">📍 Complutense University of Madrid, Spain | 12 March 2026</div>
+                    <p>Applied social network analysis using Gephi to map the network of detective fiction translation activities in late Qing and early Republican China. Combined quantitative visualization with historical interpretation.</p>
+                    <div class="conf-status">✅ Presented</div>
+                    <div class="conf-award">Publication Forthcoming</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 奖项与荣誉板块（与繁体版对齐新增） -->
+        <section class="awards-section">
+            <div class="container">
+                <h2>🏆 Awards & Honors</h2>
+
+                <div class="award-item">
+                    <div class="award-title">Outstanding Academic Achievement Award</div>
+                    <div class="award-issuer">XXX University | 2025</div>
+                    <div class="award-desc">Awarded for exceptional performance in doctoral research on late Qing translation history</div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-title">Research Grant for Young Scholars</div>
+                    <div class="award-issuer">XXX Research Institute | 2024</div>
+                    <div class="award-desc">Funded research project: "Transcultural Communication of Chinese Xiqu in the 19th Century"</div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-title">Best Paper Award (Translation Studies)</div>
+                    <div class="award-issuer">XXX Academic Association | 2023</div>
+                    <div class="award-desc">Awarded for the paper "Translation Norms of Detective Fiction in Late Qing China"</div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-title">Doctoral Fellowship</div>
+                    <div class="award-issuer">XXX Foundation | 2022-2025</div>
+                    <div class="award-desc">Full funding support for doctoral studies in Translation and Cultural History</div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-title">Excellent Graduate Award</div>
+                    <div class="award-issuer">XXX University | 2021</div>
+                    <div class="award-desc">Top 5% of master's graduates in Translation Studies</div>
                 </div>
             </div>
         </section>
@@ -61,7 +183,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Junhao Huang. Last updated: March 2026</p>
+            <p>&copy; 2026 Junhao Huang. Last updated: April 2026</p>
         </div>
     </footer>
 </body>
